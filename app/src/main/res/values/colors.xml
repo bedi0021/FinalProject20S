@@ -3,4 +3,11 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="backcolor">#FF8C00</color>
+    <color name="lavendar">#E6E6FA</color>
+    <color name="purple">#9932CC</color>
+    <color name="darkblack">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="maroon">#800000</color>
+
 </resources>

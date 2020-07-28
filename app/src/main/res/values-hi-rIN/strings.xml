@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">अंतिम परियोजना20स</string>
+    <string name="GDS">जियो डेटा स्रोत</string>
+    <string name="SMH">फुटबॉल मैच</string>
+    <string name="SLS">गाने के बोल सर्च</string>
+    <string name="DSS">डीजर गीत खोज</string>
+    <string name="kiran">किरनप्रीत द्वारा</string>
+    <string name="abhishek">अभिषेक द्वारा</string>
+    <string name="harman">हरमनप्रीत द्वारा</string>
+    <string name="shorya">शौर्य द्वारा</string>
+    <string name="finalproject">अंतिम परियोजना</string>
+</resources>

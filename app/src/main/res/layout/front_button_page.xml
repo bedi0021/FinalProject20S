@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backcolor">
+
+    <TextView
+        android:id="@+id/finalproject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/finalproject"
+        android:textSize="40dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="100dp"/>
+    <Button
+        android:id="@+id/GDSbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/GDS"
+        android:textSize="15dp"
+        android:textColor="@color/maroon"
+        android:layout_marginTop="65dp"
+        android:layout_below="@id/finalproject"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        tools:layout_editor_absoluteY="181dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/kiran"
+        android:text="@string/kiran"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/GDSbtn"
+        android:layout_marginBottom="30dp"/>
+
+    <Button
+        android:id="@+id/SMHbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kiran"
+        android:text="@string/SMH"
+        android:textColor="@color/maroon"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="342dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/abhishek"
+        android:text="@string/abhishek"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/SMHbtn"
+        android:layout_marginBottom="30dp"/>
+
+    <Button
+        android:id="@+id/SLSbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/abhishek"
+        android:text="@string/SLS"
+        android:textColor="@color/maroon"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="452dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/harman"
+        android:text="@string/harman"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/SLSbtn"
+        android:layout_marginBottom="30dp"/>
+    <Button
+        android:id="@+id/DSSbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/harman"
+        android:text="@string/DSS"
+        android:textSize="15dp"
+        android:textColor="@color/maroon"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="528dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shorya"
+        android:text="@string/shorya"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/DSSbtn"
+        android:layout_marginBottom="20dp"/>
+</RelativeLayout>

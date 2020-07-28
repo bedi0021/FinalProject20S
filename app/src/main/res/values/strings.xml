@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">FinalProject20S</string>
+    <string name="GDS">Geo Data Source</string>
+    <string name="SMH">Soccer Match Highlights</string>
+    <string name="SLS">Song Lyrics Search</string>
+    <string name="DSS">Deezer Song Search</string>
+    <string name="kiran">By Kiranpreet</string>
+    <string name="abhishek">By Abhishek</string>
+    <string name="harman">By Harmanpreet</string>
+    <string name="shorya">By Shorya</string>
+    <string name="finalproject">FinalProject</string>
 </resources>
