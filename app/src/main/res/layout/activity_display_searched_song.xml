@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisplaySearchedSong">
+
+    <ProgressBar
+        android:id="@+id/PBinSearched"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"
+        />
+
+    <ImageView
+        android:layout_below="@+id/PBinSearched"
+        android:id="@+id/musicalnotes2"
+        android:layout_width="match_parent"
+        android:layout_height="178dp"
+        android:src="@drawable/musicalnotes2" />
+
+    <TextView
+        android:id="@+id/displaysearchedsong"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/musicalnotes2"
+        android:text="@string/songname"
+        android:textColor="@color/maroon"
+        android:textSize="20dp" />
+    <Button
+        android:id="@+id/getlyrics"
+        android:layout_toRightOf="@id/displaysearchedsong"
+        android:layout_below="@id/musicalnotes2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/showlyrics"/>
+    <TextView
+        android:id="@+id/displaysearchedartist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple"
+        android:layout_below="@id/displaysearchedsong"
+        android:text="@string/artist"
+        android:textSize="15dp"/>
+
+    <ScrollView
+        android:id="@+id/scrolllyrics2"
+        android:layout_width="match_parent"
+        android:layout_height="445dp"
+        android:layout_below="@+id/displaysearchedartist">
+
+        <TextView
+            android:id="@+id/lyricsgotten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/maroon"
+            android:textSize="20dp"
+            android:text="@string/lyricsGoesHere"/>
+
+    </ScrollView>
+    <TextView
+        android:id="@+id/addtofavs2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/creamypink"
+        android:layout_below="@+id/scrolllyrics2"
+        android:layout_toLeftOf="@+id/heartButton2"
+        android:layout_alignParentLeft="true"
+        android:text="@string/addtofavs"
+        android:textSize="20dp"/>
+
+    <ImageButton
+        android:id="@+id/heartButton2"
+        android:clickable="true"
+        android:layout_width="56dp"
+        android:layout_height="63dp"
+        android:layout_below="@+id/scrolllyrics2"
+        android:fitsSystemWindows="true"
+        android:layout_toLeftOf="@+id/helpindisplay2"
+        android:src="@drawable/heartbtn2" />
+    <Button
+        android:id="@+id/helpindisplay2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scrolllyrics2"
+        android:layout_alignParentRight="true"
+        android:text="@string/help"/>
+
+
+</RelativeLayout>

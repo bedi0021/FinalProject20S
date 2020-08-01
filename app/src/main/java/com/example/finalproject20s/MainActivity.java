@@ -2,6 +2,7 @@ package com.example.finalproject20s;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         SLSbutton.setOnClickListener(btn -> {
             //Song Lyrics Search
             //Add your respective Activity
+            Intent profile = new Intent(MainActivity.this, TopSearches.class);
+            startActivity(profile);
         });
 
         DSSbutton.setOnClickListener(btn -> {
