@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/soccerMatch"
+        android:title="@string/soccermatch"
+        android:icon="@drawable/soccer"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/songLyrics"
+        android:title="@string/songlyrics"
+        android:icon="@drawable/musical"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/dezzerSong"
+        android:title="@string/dezzersong"
+        android:icon="@drawable/micro"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/aboutProject"
+        android:title="@string/about_this_project"
+        app:showAsAction="never"/>
+
+
+
+</menu>

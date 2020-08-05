@@ -10,4 +10,43 @@
     <string name="harman">हरमनप्रीत द्वारा</string>
     <string name="shorya">शौर्य द्वारा</string>
     <string name="finalproject">अंतिम परियोजना</string>
+    <string name="open">खुला </string>
+    <string name="close">बंद करे</string>
+    <string name="instructions">अनुदेश</string>
+    <string name="instructions_about_app">
+        यह ऐप मूल रूप से दिए गए देशांतर और अक्षांश के आधार पर शहरों को प्रदर्शित करता है।
+                             इस ऐप का उपयोग कैसे करें?
+         पहली स्क्रीन पर आप दो इनपुट बॉक्स देख सकते हैं, जिसमें आपको वैध देशांतर और अक्षांश डालना होगा। उसके बाद
+         प्रेस-> उस देशांतर और अक्षांश के आसपास के शहरों को देखने के लिए बटन दबाया। सभी शहर प्रदर्शित करेंगे
+         अगली स्क्रीन पर, यदि आप किसी शहर के बारे में विवरण देखना चाहते हैं, तो आप बस उस शहर पर क्लिक कर सकते हैं जहाँ आप देख सकते हैं
+         क्षेत्र, उस शहर की मुद्रा और उस शहर के विशिष्ट देशांतर और अक्षांश।
+         गूगल मैप्स पर उस शहर को देखने के लिए-> Google मैप्स बटन पर जाएं।
+         Add to पसंदीदा बटन पर क्लिक करके आप अपनी पसंदीदा सूची में किसी भी शहर को जोड़ सकते हैं।
+         अपनी पसंदीदा सूची में से किसी भी शहर को हटाने के लिए आप Remove From पसंदीदा बटन पर क्लिक कर सकते हैं या आप पसंदीदा पर जा सकते हैं
+         शहर की सूची और फिर वहाँ से हटा दें।
+    </string>
+    <string name="geo_location">जियो लोकेशन</string>
+    <string name="version">संस्करण</string>
+    <string name="kiranpreet_kaur">किरणप्रीत कौर</string>
+    <string name="put_latitude_here">यहां अक्षांश लगाएं</string>
+    <string name="put_longitude_here">यहां देशांतर डालें</string>
+    <string name="done">किया हुआ</string>
+    <string name="favorite_cities">पसंदीदा शहर</string>
+    <string name="go_to_google_maps">Google मानचित्र पर जाएं</string>
+    <string name="add_to_favorite">पसंदीदा लिस्ट मे डालें</string>
+    <string name="donate_to_project">परियोजना के लिए दान करें</string>
+    <string name="about_the_api">एपीआई के बारे में</string>
+    <string name="instructions_for_this_app">इस ऐप के लिए निर्देश</string>
+    <string name="soccermatch">फुटबॉल मैच</string>
+    <string name="songlyrics">गाने के बोल</string>
+        <string name="dezzersong">dezzerSong</string>
+    <string name="about_this_project">इस परियोजना के बारे में</string>
+    <string name="please_give">कृपया उदारता से दें</string>
+    <string name="how_much">आप कितना पैसा दान करना चाहते हैं?</string>
+    <string name="thankyou">धन्यवाद</string>
+    <string name="cancel">रद्द करना</string>
+    <string name="about_project_message">यह शहर खोजक गतिविधि है, जिसे किरणप्रीत कौर ने लिखा है</string>
+    <string name="enter_value">कृपया मान दर्ज करें!</string>
+    <string name="remove_from_favorite">पसंदीदा से निकालें</string>
+
 </resources>

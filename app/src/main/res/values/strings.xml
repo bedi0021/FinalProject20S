@@ -9,4 +9,42 @@
     <string name="harman">By Harmanpreet</string>
     <string name="shorya">By Shorya</string>
     <string name="finalproject">FinalProject</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="instructions">Instructions</string>
+    <string name="instructions_about_app">This app is basically displays the cities based on given longitude and latitude.
+                            How to use this app?
+        On the first screen you can see two input boxes there you have to put valid longitude and latitude. After that
+        press-> Done button to see the cities that are around that longitude and latitude. All the cities will display
+        on the next screen, if you want to see details about any city, you can simply click on that city where you can see
+        Region, Currency of that city and specific longitude and latitude of that city.
+        To see that city on google maps click-> Go To Google Maps button.
+        You can add any city to your favorite list by clicking on Add to Favorite button.
+        To remove any city from your favorite list you can click on Remove From favorites button or you can visit Favorite
+        city list and then remove from there.
+    </string>
+    <string name="geo_location">Geo Location</string>
+    <string name="version">Version</string>
+    <string name="kiranpreet_kaur">Kiranpreet Kaur</string>
+    <string name="put_latitude_here">Put Latitude Here</string>
+    <string name="put_longitude_here">Put Longitude Here</string>
+    <string name="done">Done</string>
+    <string name="favorite_cities">Favorite Cities</string>
+    <string name="go_to_google_maps">Go to Google Maps</string>
+    <string name="add_to_favorite">Add to favorite</string>
+    <string name="donate_to_project">Donate to project</string>
+    <string name="about_the_api">About the API</string>
+    <string name="instructions_for_this_app">Instructions for this app</string>
+    <string name="soccermatch">soccerMatch</string>
+    <string name="songlyrics">songLyrics</string>
+    <string name="dezzersong">dezzerSong</string>
+    <string name="about_this_project">About this project</string>
+    <string name="please_give">Please give generou$ly</string>
+    <string name="how_much">How much money do you want to donate?</string>
+    <string name="thankyou">Thank you</string>
+    <string name="cancel">Cancel</string>
+    <string name="about_project_message">This is the City Finder activity, written by Kiranpreet Kaur</string>
+    <string name="enter_value">Please enter the values!</string>
+    <string name="remove_from_favorite">Remove from Favorites</string>
+
 </resources>

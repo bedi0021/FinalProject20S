@@ -2,6 +2,7 @@ package com.example.finalproject20s;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -22,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
         GDSbutton.setOnClickListener(btn -> {
             //Geo Data sourse
             //Add your respective Activity
+
+            Intent inputlocation = new Intent(MainActivity.this,InputLocationActivity.class);
+            startActivity(inputlocation);
+
+
         });
 
         SMHbutton.setOnClickListener(btn -> {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/instructions"
+        android:title="@string/instructions_for_this_app"
+        />
+    <item android:id="@+id/aboutAPI"
+        android:title="@string/about_the_api"
+        />
+    <item android:id="@+id/donate"
+        android:title="@string/donate_to_project"
+        />
+
+
+
+</menu>
