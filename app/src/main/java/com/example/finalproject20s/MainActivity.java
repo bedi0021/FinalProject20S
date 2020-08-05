@@ -6,6 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
+
+/**
+ * This class loads all four apps from the project that has been displayed on screen
+ * @since 1.0
+ */
 public class MainActivity extends AppCompatActivity {
 
     Button GDSbutton, SMHbutton, SLSbutton, DSSbutton;

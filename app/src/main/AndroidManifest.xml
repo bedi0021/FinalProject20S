@@ -11,7 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DisplaySearchedSong"/>
+        <activity android:name=".APIview"></activity>
+        <activity android:name=".GoogleWebView" />
+        <activity android:name=".FragmentMade" />
+        <activity android:name=".FavouriteList" />
+        <activity android:name=".DetailFragment" />
+        <activity android:name=".DisplaySearchedSong" />
         <activity android:name=".DisplayTopSearches" />
         <activity android:name=".TopSearches" />
         <activity android:name=".MainActivity">

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single">
+    <item
+        android:id="@+id/gotoGDS"
+        android:title="@string/GDS"
+        android:icon="@drawable/earth"/>
+    <item
+        android:id="@+id/gotoSMH"
+        android:title="@string/SMH"
+        android:icon="@drawable/soccer"/>
+    <item
+        android:id="@+id/gotoDSS"
+        android:title="@string/DSS"
+        android:icon="@drawable/deezer"/>
+</group>
+    <item android:title="About">
+        <menu>
+            <item
+                android:id="@+id/instrucionForApp"
+                android:title="@string/appInstructions"/>
+            <item
+                android:id="@+id/AboutApi"
+                android:title="@string/aboutAPI"/>
+            <item
+                android:id="@+id/donate"
+                android:title="@string/donateProject"/>
+        </menu>
+    </item>
+</menu>

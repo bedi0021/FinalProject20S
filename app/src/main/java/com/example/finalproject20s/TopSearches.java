@@ -1,7 +1,11 @@
 package com.example.finalproject20s;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,32 +13,41 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.ProgressBar;
-import android.widget.SearchView;
 import android.widget.Toast;
-
-import org.json.JSONObject;
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserFactory;
-
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import androidx.appcompat.widget.Toolbar;
+import com.google.android.material.navigation.NavigationView;
 import java.util.ArrayList;
 
-public class TopSearches extends AppCompatActivity {
+/**
+ * This application helps you to find lyrics for the popular songs around he world
+ * Along with doing a google search for the desired song
+ *
+ * @author Harmanpreet Bedi
+ * @version 1.0
+ * @since 2020-05-08
+ *
+ */
+
+/**
+ * This class loads the first which will be opened after clicking for the desire Song search app
+ *
+ * @since 1.0
+ */
+public class TopSearches extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     EditText artist,songName;
-    SearchView googleSearch;
+    EditText googleSearch;
     Button googleButton, lyricsSearch, favButton,helpButton;
     ListView topSearchesListView;
-    ProgressBar pBar;
+
 
     SharedPreferences prefs = null, prefs2=null;
     MyListAdapter myTopSearchAdapter;
@@ -51,13 +64,26 @@ public class TopSearches extends AppCompatActivity {
 
         artist=(EditText)findViewById(R.id.artist);
         songName=(EditText)findViewById(R.id.songname);
-        googleSearch=(SearchView)findViewById(R.id.googleSearch);
+        googleSearch=(EditText)findViewById(R.id.googleSearch);
         googleButton=(Button)findViewById(R.id.googlebtn);
         lyricsSearch=(Button)findViewById(R.id.lyricssearchbtn);
-        favButton=(Button)findViewById(R.id.gotofavs);
-        helpButton=(Button)findViewById(R.id.helpbtn);
         topSearchesListView =(ListView)findViewById(R.id.topsearcheslist);
-        pBar=(ProgressBar)findViewById(R.id.progressBar);
+        Toolbar tBar =(Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(tBar);
+        googleButton.setOnClickListener(click -> {
+            Intent profile2 = new Intent(TopSearches.this, GoogleWebView.class);
+            String googlestr = googleSearch.getText().toString();
+            profile2.putExtra("GOOGLE",googlestr);
+            startActivity(profile2);
+        });
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
+                drawer, tBar, R.string.open, R.string.close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(TopSearches.this);
 
 
         prefs=getSharedPreferences("Song search", Context.MODE_PRIVATE);
@@ -68,22 +94,6 @@ public class TopSearches extends AppCompatActivity {
         String savedArtistString = prefs2.getString("ReserveArtistSearch","police");
         artist.setText(savedArtistString);
 
-
-        helpButton.setOnClickListener(btn -> {
-            AlertDialog.Builder alert = new AlertDialog.Builder(TopSearches.this);
-            alert.setTitle(getResources().getString(R.string.help));
-            alert.setMessage(getResources().getString(R.string.helpinfo));
-            alert.setPositiveButton(getResources().getString(R.string.yes),(dialog, which)->{
-                Toast.makeText(TopSearches.this,getResources().getString(R.string.glad),Toast.LENGTH_LONG).show();
-            });
-            alert.setNegativeButton(getResources().getString(R.string.no),(dialog, which)->{
-                Toast.makeText(TopSearches.this,getResources().getString(R.string.feedback),Toast.LENGTH_LONG).show();
-                dialog.dismiss();
-            });
-            alert.show();
-
-        });
-
         //Adding random artist and songs
         addRandomTopSerachedSongs(0,"Billie eilish","Ocean eyes");
         addRandomTopSerachedSongs(1,"One direction","One thing");
@@ -93,6 +103,11 @@ public class TopSearches extends AppCompatActivity {
         addRandomTopSerachedSongs(5,"Maroon 5","Memories");
         addRandomTopSerachedSongs(6,"Maroon 5","Girls like you");
         addRandomTopSerachedSongs(7,"Marshmello"," Friends");
+        addRandomTopSerachedSongs(8,"Eminem","Mocking Bird");
+        addRandomTopSerachedSongs(9,"Eminem","Rap god");
+        addRandomTopSerachedSongs(10,"One direction","Live while we're young");
+        addRandomTopSerachedSongs(11,"Dua lipa","New Rules");
+
         myTopSearchAdapter=new MyListAdapter(this,topSearchesList);
         topSearchesListView.setAdapter(myTopSearchAdapter);
 
@@ -112,7 +127,6 @@ public class TopSearches extends AppCompatActivity {
 
         lyricsSearch.setOnClickListener(btn -> {
             saveSharedPrefs(songName.getText().toString(),artist.getText().toString());
-            //saveSharedPrefs();
             String artistN=artist.getText().toString();
             String songN=songName.getText().toString();
             Intent profile = new Intent(TopSearches.this,DisplaySearchedSong.class);
@@ -125,18 +139,123 @@ public class TopSearches extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.sls_menu, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.favheart:
+                Intent profile = new Intent(TopSearches.this, FavouriteList.class);
+                startActivity(profile);
+                break;
+            case R.id.helpmenuitem:
+                AlertDialog.Builder alert = new AlertDialog.Builder(TopSearches.this);
+                alert.setTitle(getResources().getString(R.string.help));
+                alert.setMessage(getResources().getString(R.string.helpinfo));
+                alert.setPositiveButton(getResources().getString(R.string.yes),(dialog, which)->{
+                    Toast.makeText(TopSearches.this,getResources().getString(R.string.glad),Toast.LENGTH_LONG).show();
+                });
+                alert.setNegativeButton(getResources().getString(R.string.no),(dialog, which)->{
+                    Toast.makeText(TopSearches.this,getResources().getString(R.string.feedback),Toast.LENGTH_LONG).show();
+                    dialog.dismiss();
+                });
+                alert.show();
+                break;
+            case R.id.aboutProject:
+                AlertDialog.Builder alert2 = new AlertDialog.Builder(TopSearches.this);
+                alert2.setTitle(getResources().getString(R.string.aboutProject));
+                alert2.setMessage(getResources().getString(R.string.writtenBy));
+                alert2.show();
+                break;
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch (menuItem.getItemId()){
+            case R.id.gotoGDS:
+
+                break;
+            case R.id.gotoSMH:
+
+                break;
+            case R.id.gotoDSS:
+
+                break;
+            case R.id.instrucionForApp:
+                AlertDialog.Builder alert2 = new AlertDialog.Builder(TopSearches.this);
+                alert2.setTitle(getResources().getString(R.string.appInstructions));
+                alert2.setMessage(getResources().getString(R.string.appInstructions2));
+                alert2.setNegativeButton(getResources().getString(R.string.close), (dialog, which) -> {dialog.dismiss();});
+                alert2.show();
+                break;
+            case R.id.AboutApi:
+                Intent profile = new Intent(TopSearches.this, APIview.class);
+                startActivity(profile);
+                break;
+            case R.id.donate:
+                AlertDialog.Builder alert4 = new AlertDialog.Builder(TopSearches.this);
+                alert4.setTitle(getResources().getString(R.string.donateProject));
+                alert4.setMessage(getResources().getString(R.string.donateProject2));
+                LayoutInflater inflater=this.getLayoutInflater();
+                View donateView = inflater.inflate(R.layout.activity_edittext,null);
+                EditText donate=(EditText)donateView.findViewById(R.id.donatehere);
+                alert4.setView(donateView);
+                alert4.setNegativeButton(getResources().getString(R.string.DonateIT),(dialog, which) -> {
+                    dialog.dismiss();
+                    String str =donate.getText().toString();
+                    donate.setText("");
+                    Toast.makeText(TopSearches.this, getResources().getString(R.string.thankDonate)+str+" "+getResources().getString(R.string.donation), Toast.LENGTH_LONG).show();
+                });
+                alert4.show();
+                break;
+        }
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        drawerLayout.closeDrawer(GravityCompat.START);
+
+        return false;
+    }
+
+    /**
+     * <p>This method adds some random values to the top search list</p>
+     *
+     * @param index This will decide the index to be used for the particular item.
+     * @param randomArtist This will add the artist name.
+     * @param randomSong This will add the song name of that artist.
+     *
+     * @since 1.0
+     */
     private void addRandomTopSerachedSongs(int index, String randomArtist, String randomSong){
         Song sng = new Song(randomArtist,randomSong);
         topSearchesList.add(index,sng);
 
     }
 
+    /**
+     * <p>This method is used is select a particular song at a particular position</p>
+     * @param position This will decide the index of the song to be selected
+     * @return retuns the song at that particular position.
+     * @since 1.0
+     */
     private Song getTopSearchItemById(int position){
         Song songstr = topSearchesList.get(position);
         return songstr;
     }
 
 
+    /**
+     * <p>This method will save the value that will be once enterd by the user.</p>
+     * @param songToSave this song will be saved after the user use the app for once.
+     * @param artistToSave this artist will be saved after the user use the app for once.
+     * @since 1.0
+     */
     private void saveSharedPrefs(String songToSave, String artistToSave){
         SharedPreferences.Editor editor2 = prefs.edit();
         editor2.putString("ReserveSongSearch",songToSave);

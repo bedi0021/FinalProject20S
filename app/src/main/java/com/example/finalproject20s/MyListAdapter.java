@@ -14,10 +14,26 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This application helps you to find lyrics for the popular songs around he world
+ * Along with doing a google search for the desired song
+ *
+ * @author Harmanpreet Bedi
+ * @version 1.0
+ * @since 2020-05-08
+ *
+ */
+
+/**
+ * This class loads an adapter in order to get the view that has used to display the songs ina list view
+ *
+ * @since 1.0
+ */
 public class MyListAdapter extends BaseAdapter {
 
     private Context cra;
-    List<Song> songList= new ArrayList();
+    List<Song> songList= null;
+
     public MyListAdapter(@NonNull Context context, @NonNull ArrayList<Song> objects) {
         this.cra =context;
         this.songList = objects;
