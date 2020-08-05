@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">अंतिम परियोजना20स</string>
     <string name="GDS">जियो डेटा स्रोत</string>
     <string name="SMH">फुटबॉल मैच</string>
     <string name="SLS">गाने के बोल सर्च</string>
@@ -10,4 +9,17 @@
     <string name="harman">हरमनप्रीत द्वारा</string>
     <string name="shorya">शौर्य द्वारा</string>
     <string name="finalproject">अंतिम परियोजना</string>
+    <string name="homepage">होमपेज</string>
+    <string name="favourites">पसंदीदा</string>
+    <string name="todo">करने के लिए</string>
+    <string name="LiveStream">लाइव स्ट्रीम</string>
+    <string name="LiveScore">लाइव स्कोर</string>
+    <string name="addfavourites">पसंदीदा में जोड़ें</string>
+    <string name="open">खुला हुआ</string>
+    <string name="close">बंद करे</string>
+    <string name="name">अभिषेक कुमार</string>
+    <string name="About1">यह गतिविधि फ़ुटबॉल मैचों का मुख्य आकर्षण प्रदान करती है</string>
+    <string name="title">फ़ुटबॉल मैच हाइलाइट्स</string>
+    <string name="version">संस्करण 1</string>
+    <string name="app_name">फ़ुटबॉल मैच हाइलाइट्स</string>
 </resources>

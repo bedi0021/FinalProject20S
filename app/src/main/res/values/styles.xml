@@ -7,5 +7,14 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="App_DialogStyle" parent = "Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name ="android:textColor">@color/white</item>
+    </style>
+
+    <style name="FrontScreen" parent ="Theme.AppCompat.NoActionBar"></style>
+    <style name="MainScreen" parent ="Theme.AppCompat.NoActionBar"></style>
+    <style name="FavouriteScreen" parent ="Theme.AppCompat.NoActionBar"></style>
+
 
 </resources>

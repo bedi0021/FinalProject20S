@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FinalProject20S</string>
+    <string name="app_name">Soccer Match Highlights</string>
     <string name="GDS">Geo Data Source</string>
     <string name="SMH">Soccer Match Highlights</string>
     <string name="SLS">Song Lyrics Search</string>
@@ -9,4 +9,16 @@
     <string name="harman">By Harmanpreet</string>
     <string name="shorya">By Shorya</string>
     <string name="finalproject">FinalProject</string>
+    <string name ="homepage">HomePage</string>
+    <string name= "favourites">Favourites</string>
+    <string name = "todo">TODO</string>
+    <string name="LiveStream">Live Stream</string>
+    <string name="open"> Open</string>
+    <string name="name">Abhishek Kumar</string>
+    <string name="LiveScore">Live Score</string>
+    <string name="addfavourites">Add to Favourites</string>
+    <string name="close">Close</string>
+    <string name="About1">This Activity provides highlights of Soccer matches</string>
+    <string name="title">Soccer Match Highlights</string>
+    <string name= "version"> Version1</string>
 </resources>

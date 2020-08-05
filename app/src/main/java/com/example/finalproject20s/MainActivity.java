@@ -2,7 +2,9 @@ package com.example.finalproject20s;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,12 +14,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.front_button_page);
 
-        GDSbutton=(Button)findViewById(R.id.GDSbtn);
-        SMHbutton=(Button)findViewById(R.id.SMHbtn);
-        SLSbutton=(Button)findViewById(R.id.SLSbtn);
-        DSSbutton=(Button)findViewById(R.id.DSSbtn);
+        GDSbutton = (Button) findViewById(R.id.GDSbtn);
+        SMHbutton = (Button) findViewById(R.id.SMHbtn);
+        SLSbutton = (Button) findViewById(R.id.SLSbtn);
+        DSSbutton = (Button) findViewById(R.id.DSSbtn);
 
         GDSbutton.setOnClickListener(btn -> {
             //Geo Data sourse
@@ -25,9 +28,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         SMHbutton.setOnClickListener(btn -> {
-            //Soccer Match Highlights
-            //Add your respective Activity
-        });
+
+         Intent intent = new Intent(MainActivity.this , frontActivity.class);
+            startActivity(intent);
+                });
 
         SLSbutton.setOnClickListener(btn -> {
             //Song Lyrics Search
