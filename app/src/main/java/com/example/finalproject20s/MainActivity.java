@@ -2,9 +2,15 @@ package com.example.finalproject20s;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
+
+/**
+ * This class loads all four apps from the project that has been displayed on screen
+ * @since 1.0
+ */
 public class MainActivity extends AppCompatActivity {
 
     Button GDSbutton, SMHbutton, SLSbutton, DSSbutton;
@@ -32,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         SLSbutton.setOnClickListener(btn -> {
             //Song Lyrics Search
             //Add your respective Activity
+            Intent profile = new Intent(MainActivity.this, TopSearches.class);
+            startActivity(profile);
         });
 
         DSSbutton.setOnClickListener(btn -> {

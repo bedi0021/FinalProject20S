@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragId"/>
+
+        <TextView
+            android:layout_below="@+id/fragId"
+    android:id="@+id/fragSong"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/songname"
+    android:textColor="@color/maroon"
+    />
+
+    <TextView
+        android:layout_below="@+id/fragSong"
+        android:id="@+id/fragArtist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/artist"
+        android:textColor="@color/purple"
+        />
+<ScrollView
+    android:layout_below="@id/fragArtist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_below="@+id/fragArtist"
+        android:id="@+id/fragLyrics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lyricsGoesHere"
+        android:textColor="@color/maroon"
+        />
+</ScrollView>
+    </RelativeLayout>
+
+</FrameLayout>
